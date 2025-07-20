@@ -22,3 +22,5 @@ external code due to encapsulation/visibility constraints.
 
 ## License
 This project is licensed under the [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
+
+[![](https://jitpack.io/v/The-Software-Toolsmith/testing-framework-for-java.svg)](https://jitpack.io/#The-Software-Toolsmith/testing-framework-for-java)
