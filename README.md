@@ -3,7 +3,7 @@ This project has been evolving for the better part of the last decade.  It has m
 and with no design document as a guide, based upon my needs for any arbitrary lab assignment I gave my students.
 Bottom line, it's a bit of a mess but it's time to put it out there.
 
-# Testing Java Framework
+# Java Testing Framework
 
 ## Background
 I used JUnit to test the correctness of the results of my students' code.  While a very useful tool in industry,
