@@ -32,6 +32,24 @@ public class ReflectDataFields
 
 
     /*
+     * constructors
+     */
+
+
+    /**
+     * prevent instantiation
+     *
+     * @since 1.0
+     */
+    private ReflectDataFields()
+        {
+
+        // noop
+
+        }   // end no-arg constructor
+
+
+    /*
      * getter/setter methods for data fields
      */
 
@@ -117,8 +135,14 @@ public class ReflectDataFields
                                  fieldName,
                                  fieldType ) ;
                 }
-            
-            reportFieldAccessFailure( ex, "retrieve", "from", theClass, anInstance, fieldName, fieldType ) ;
+
+            reportFieldAccessFailure( ex,
+                                      "retrieve",
+                                      "from",
+                                      theClass,
+                                      anInstance,
+                                      fieldName,
+                                      fieldType ) ;
 
 //            final String exceptionClassName = ex.getClass().getSimpleName() ;
 //
@@ -136,16 +160,17 @@ public class ReflectDataFields
 //                                                           : ex.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, ex ) ;
-            
-            return null ;  // can't execute - reportFieldAccessFailure() always throws TestingException
+
+            return null ;  // can't execute - reportFieldAccessFailure() always throws
+                           // TestingException
             }
 
         }   // end getField()
-    
+
 
     /**
      * utility to report a field access failure via Reflection
-     * 
+     *
      * @param thrown
      *     the caught throwable
      * @param accessType
@@ -177,7 +202,7 @@ public class ReflectDataFields
         {
 
         final String thrownClassName = thrown.getClass().getSimpleName() ;
-        
+
         if ( null == theClass )
             {
             theClass = anInstance.getClass() ;
@@ -199,7 +224,7 @@ public class ReflectDataFields
                                                        : thrown.getMessage() ) ) ;
 
         throw new TestingException( errorMessage, thrown ) ;
-        
+
         }   // end reportFieldAccessFailure()
 
 
@@ -229,8 +254,13 @@ public class ReflectDataFields
             }
         catch ( IllegalArgumentException | IllegalAccessException e )
             {
-            
-            reportFieldAccessFailure( e, "retrieve", "from", null, anInstance, fieldName, "boolean" ) ;
+            reportFieldAccessFailure( e,
+                                      "retrieve",
+                                      "from",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "boolean" ) ;
 
 //            final String exceptionClassName = e.getClass().getSimpleName() ;
 //
@@ -248,8 +278,9 @@ public class ReflectDataFields
 //                                                           : e.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, e ) ;
-            
-            return false ;  // can't execute - reportFieldAccessFailure() always throws TestingException
+
+            return false ;  // can't execute - reportFieldAccessFailure() always throws
+                            // TestingException
             }
 
         }   // end getBooleanField()
@@ -281,8 +312,13 @@ public class ReflectDataFields
             }
         catch ( IllegalArgumentException | IllegalAccessException e )
             {
-            
-            reportFieldAccessFailure( e, "retrieve", "from", null, anInstance, fieldName, "byte" ) ;
+            reportFieldAccessFailure( e,
+                                      "retrieve",
+                                      "from",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "byte" ) ;
 
 //            final String exceptionClassName = e.getClass().getSimpleName() ;
 //
@@ -299,7 +335,7 @@ public class ReflectDataFields
 //                                                             e.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, e ) ;
-            
+
             return 0 ;  // can't execute - reportFieldAccessFailure() always throws TestingException
             }
 
@@ -332,8 +368,13 @@ public class ReflectDataFields
             }
         catch ( IllegalArgumentException | IllegalAccessException e )
             {
-            
-            reportFieldAccessFailure( e, "retrieve", "from", null, anInstance, fieldName, "char" ) ;
+            reportFieldAccessFailure( e,
+                                      "retrieve",
+                                      "from",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "char" ) ;
 
 //            final String exceptionClassName = e.getClass().getSimpleName() ;
 //
@@ -350,7 +391,7 @@ public class ReflectDataFields
 //                                                             e.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, e ) ;
-            
+
             return 0 ;  // can't execute - reportFieldAccessFailure() always throws TestingException
             }
 
@@ -383,8 +424,13 @@ public class ReflectDataFields
             }
         catch ( IllegalArgumentException | IllegalAccessException e )
             {
-            
-            reportFieldAccessFailure( e, "retrieve", "from", null, anInstance, fieldName, "double" ) ;
+            reportFieldAccessFailure( e,
+                                      "retrieve",
+                                      "from",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "double" ) ;
 
 //            final String exceptionClassName = e.getClass().getSimpleName() ;
 //
@@ -401,8 +447,9 @@ public class ReflectDataFields
 //                                                             e.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, e ) ;
-            
-            return 0.0 ;  // can't execute - reportFieldAccessFailure() always throws TestingException
+
+            return 0.0 ;  // can't execute - reportFieldAccessFailure() always throws
+                          // TestingException
             }
 
         }   // end getDoubleField()
@@ -434,8 +481,13 @@ public class ReflectDataFields
             }
         catch ( IllegalArgumentException | IllegalAccessException e )
             {
-            
-            reportFieldAccessFailure( e, "retrieve", "from", null, anInstance, fieldName, "float" ) ;
+            reportFieldAccessFailure( e,
+                                      "retrieve",
+                                      "from",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "float" ) ;
 
 //            final String exceptionClassName = e.getClass().getSimpleName() ;
 //
@@ -452,8 +504,9 @@ public class ReflectDataFields
 //                                                             e.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, e ) ;
-            
-            return 0.0F ;  // can't execute - reportFieldAccessFailure() always throws TestingException
+
+            return 0.0F ;  // can't execute - reportFieldAccessFailure() always throws
+                           // TestingException
             }
 
         }   // end getFloatField()
@@ -485,8 +538,13 @@ public class ReflectDataFields
             }
         catch ( IllegalArgumentException | IllegalAccessException e )
             {
-            
-            reportFieldAccessFailure( e, "retrieve", "from", null, anInstance, fieldName, "int" ) ;
+            reportFieldAccessFailure( e,
+                                      "retrieve",
+                                      "from",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "int" ) ;
 
 //            final String exceptionClassName = e.getClass().getSimpleName() ;
 //
@@ -503,7 +561,7 @@ public class ReflectDataFields
 //                                                             e.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, e ) ;
-            
+
             return 0 ;  // can't execute - reportFieldAccessFailure() always throws TestingException
             }
 
@@ -536,8 +594,13 @@ public class ReflectDataFields
             }
         catch ( IllegalArgumentException | IllegalAccessException e )
             {
-            
-            reportFieldAccessFailure( e, "retrieve", "from", null, anInstance, fieldName, "long" ) ;
+            reportFieldAccessFailure( e,
+                                      "retrieve",
+                                      "from",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "long" ) ;
 
 //            final String exceptionClassName = e.getClass().getSimpleName() ;
 //
@@ -554,8 +617,9 @@ public class ReflectDataFields
 //                                                             e.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, e ) ;
-            
-            return 0L ;  // can't execute - reportFieldAccessFailure() always throws TestingException
+
+            return 0L ;  // can't execute - reportFieldAccessFailure() always throws
+                         // TestingException
             }
 
         }   // end getLongField()
@@ -587,8 +651,13 @@ public class ReflectDataFields
             }
         catch ( IllegalArgumentException | IllegalAccessException e )
             {
-            
-            reportFieldAccessFailure( e, "retrieve", "from", null, anInstance, fieldName, "reference" ) ;
+            reportFieldAccessFailure( e,
+                                      "retrieve",
+                                      "from",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "reference" ) ;
 
 //            final String exceptionClassName = e.getClass().getSimpleName() ;
 //
@@ -605,8 +674,9 @@ public class ReflectDataFields
 //                                                             e.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, e ) ;
-            
-            return null ;  // can't execute - reportFieldAccessFailure() always throws TestingException
+
+            return null ;  // can't execute - reportFieldAccessFailure() always throws
+                           // TestingException
             }
 
         }   // end getReferenceField()
@@ -638,8 +708,13 @@ public class ReflectDataFields
             }
         catch ( IllegalArgumentException | IllegalAccessException e )
             {
-            
-            reportFieldAccessFailure( e, "retrieve", "from", null, anInstance, fieldName, "short" ) ;
+            reportFieldAccessFailure( e,
+                                      "retrieve",
+                                      "from",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "short" ) ;
 
 //            final String exceptionClassName = e.getClass().getSimpleName() ;
 //
@@ -656,7 +731,7 @@ public class ReflectDataFields
 //                                                             e.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, e ) ;
-            
+
             return 0 ;  // can't execute - reportFieldAccessFailure() always throws TestingException
             }
 
@@ -697,8 +772,13 @@ public class ReflectDataFields
             }
         catch ( IllegalAccessException | SecurityException ex )
             {
-            
-            reportFieldAccessFailure( ex, "retrieve or set", "from/to", null, anInstance, fieldName, "boolean" ) ;
+            reportFieldAccessFailure( ex,
+                                      "retrieve or set",
+                                      "from/to",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "boolean" ) ;
 
 //            final String exceptionClassName = ex.getClass().getSimpleName() ;
 //
@@ -715,8 +795,9 @@ public class ReflectDataFields
 //                                                             ex.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, ex ) ;
-            
-            return false ;  // can't execute - reportFieldAccessFailure() always throws TestingException
+
+            return false ;  // can't execute - reportFieldAccessFailure() always throws
+                            // TestingException
             }
 
         }   // end setBooleanField()
@@ -754,8 +835,13 @@ public class ReflectDataFields
             }
         catch ( IllegalAccessException | SecurityException ex )
             {
-            
-            reportFieldAccessFailure( ex, "retrieve or set", "from/to", null, anInstance, fieldName, "byte" ) ;
+            reportFieldAccessFailure( ex,
+                                      "retrieve or set",
+                                      "from/to",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "byte" ) ;
 
 //            final String exceptionClassName = ex.getClass().getSimpleName() ;
 //
@@ -772,7 +858,7 @@ public class ReflectDataFields
 //                                                             ex.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, ex ) ;
-            
+
             return 0 ;  // can't execute - reportFieldAccessFailure() always throws TestingException
             }
 
@@ -811,8 +897,13 @@ public class ReflectDataFields
             }
         catch ( IllegalAccessException | SecurityException ex )
             {
-            
-            reportFieldAccessFailure( ex, "retrieve or set", "from/to", null, anInstance, fieldName, "char" ) ;
+            reportFieldAccessFailure( ex,
+                                      "retrieve or set",
+                                      "from/to",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "char" ) ;
 
 //            final String exceptionClassName = ex.getClass().getSimpleName() ;
 //
@@ -829,7 +920,7 @@ public class ReflectDataFields
 //                                                             ex.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, ex ) ;
-            
+
             return 0 ;  // can't execute - reportFieldAccessFailure() always throws TestingException
             }
 
@@ -868,8 +959,13 @@ public class ReflectDataFields
             }
         catch ( IllegalAccessException | SecurityException ex )
             {
-            
-            reportFieldAccessFailure( ex, "retrieve or set", "from/to", null, anInstance, fieldName, "double" ) ;
+            reportFieldAccessFailure( ex,
+                                      "retrieve or set",
+                                      "from/to",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "double" ) ;
 
 //            final String exceptionClassName = ex.getClass().getSimpleName() ;
 //
@@ -886,8 +982,9 @@ public class ReflectDataFields
 //                                                             ex.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, ex ) ;
-            
-            return 0.0 ;  // can't execute - reportFieldAccessFailure() always throws TestingException
+
+            return 0.0 ;  // can't execute - reportFieldAccessFailure() always throws
+                          // TestingException
             }
 
         }   // end setDoubleField()
@@ -925,8 +1022,13 @@ public class ReflectDataFields
             }
         catch ( IllegalAccessException | SecurityException ex )
             {
-            
-            reportFieldAccessFailure( ex, "retrieve or set", "from/to", null, anInstance, fieldName, "float" ) ;
+            reportFieldAccessFailure( ex,
+                                      "retrieve or set",
+                                      "from/to",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "float" ) ;
 
 //            final String exceptionClassName = ex.getClass().getSimpleName() ;
 //
@@ -943,8 +1045,9 @@ public class ReflectDataFields
 //                                                             ex.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, ex ) ;
-            
-            return 0.0F ;  // can't execute - reportFieldAccessFailure() always throws TestingException
+
+            return 0.0F ;  // can't execute - reportFieldAccessFailure() always throws
+                           // TestingException
             }
 
         }   // end setFloatField()
@@ -982,8 +1085,13 @@ public class ReflectDataFields
             }
         catch ( IllegalAccessException | SecurityException ex )
             {
-            
-            reportFieldAccessFailure( ex, "retrieve or set", "from/to", null, anInstance, fieldName, "int" ) ;
+            reportFieldAccessFailure( ex,
+                                      "retrieve or set",
+                                      "from/to",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "int" ) ;
 
 //            final String errorMessage = String.format( "Failed to retrieve or set int value from/to class %s, field %s, instance %s: %s%s",
 //                                                       anInstance.getClass()
@@ -998,7 +1106,7 @@ public class ReflectDataFields
 //                                                             ex.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, ex ) ;
-            
+
             return 0 ;  // can't execute - reportFieldAccessFailure() always throws TestingException
             }
 
@@ -1037,8 +1145,13 @@ public class ReflectDataFields
             }
         catch ( IllegalAccessException | SecurityException ex )
             {
-            
-            reportFieldAccessFailure( ex, "retrieve or set", "from/to", null, anInstance, fieldName, "long" ) ;
+            reportFieldAccessFailure( ex,
+                                      "retrieve or set",
+                                      "from/to",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "long" ) ;
 
 //            final String errorMessage = String.format( "Failed to retrieve or set long value from/to class %s, field %s, instance %s: %s%s",
 //                                                       anInstance.getClass()
@@ -1053,8 +1166,9 @@ public class ReflectDataFields
 //                                                             ex.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, ex ) ;
-            
-            return 0L ;  // can't execute - reportFieldAccessFailure() always throws TestingException
+
+            return 0L ;  // can't execute - reportFieldAccessFailure() always throws
+                         // TestingException
             }
 
         }   // end setLongField()
@@ -1094,8 +1208,13 @@ public class ReflectDataFields
             }
         catch ( IllegalAccessException | SecurityException ex )
             {
-            
-            reportFieldAccessFailure( ex, "retrieve or set", "from/to", null, anInstance, fieldName, "reference" ) ;
+            reportFieldAccessFailure( ex,
+                                      "retrieve or set",
+                                      "from/to",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "reference" ) ;
 
 //            final String errorMessage = String.format( "Failed to retrieve or set reference value from/to class %s, field %s, instance %s: %s%s",
 //                                                       anInstance.getClass()
@@ -1110,8 +1229,9 @@ public class ReflectDataFields
 //                                                             ex.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, ex ) ;
-            
-            return null ;  // can't execute - reportFieldAccessFailure() always throws TestingException
+
+            return null ;  // can't execute - reportFieldAccessFailure() always throws
+                           // TestingException
             }
 
         }   // end setReferenceField()
@@ -1149,8 +1269,13 @@ public class ReflectDataFields
             }
         catch ( IllegalAccessException | SecurityException ex )
             {
-            
-            reportFieldAccessFailure( ex, "retrieve or set", "from/to", null, anInstance, fieldName, "short" ) ;
+            reportFieldAccessFailure( ex,
+                                      "retrieve or set",
+                                      "from/to",
+                                      null,
+                                      anInstance,
+                                      fieldName,
+                                      "short" ) ;
 
 //            final String errorMessage = String.format( "Failed to retrieve or set short value from/to class %s, field %s, instance %s: %s%s",
 //                                                       anInstance.getClass()
@@ -1165,7 +1290,7 @@ public class ReflectDataFields
 //                                                             ex.getMessage() ) ) ;
 //
 //            throw new TestingException( errorMessage, ex ) ;
-            
+
             return 0 ;  // can't execute - reportFieldAccessFailure() always throws TestingException
             }
 

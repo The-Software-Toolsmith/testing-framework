@@ -63,6 +63,8 @@ public class LoopDetectedException extends RuntimeException
 
 
     /**
+     * constructor with cause
+     *
      * @param cause
      *     the 'wrapped' exception
      */
@@ -75,6 +77,8 @@ public class LoopDetectedException extends RuntimeException
 
 
     /**
+     * constructor with cause and message
+     *
      * @param message
      *     descriptive message related to the {@code cause}
      * @param cause

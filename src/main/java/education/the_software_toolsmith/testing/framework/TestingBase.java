@@ -448,7 +448,7 @@ public class TestingBase
 
     /**
      * Disable System.exit() <br>
-     * <emphasis>{@code SecurityManager} is deprecated as of Java 17</emphasis>
+     * {@code SecurityManager} is deprecated as of Java 17
      * <p>
      * NOTE as of 7.2 this is a noop
      */
@@ -475,7 +475,7 @@ public class TestingBase
 
     /**
      * Re-enable System.exit() <br>
-     * <emphasis>{@code SecurityManager} is deprecated as of Java 17</emphasis>
+     * {@code SecurityManager} is deprecated as of Java 17
      * <p>
      * NOTE as of 7.2 this is a noop
      */

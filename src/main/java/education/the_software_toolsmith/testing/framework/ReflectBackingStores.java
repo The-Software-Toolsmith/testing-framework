@@ -42,6 +42,24 @@ public class ReflectBackingStores
     {
 
 
+    /*
+     * constructors
+     */
+
+
+    /**
+     * prevent instantiation
+     *
+     * @since 1.0
+     */
+    private ReflectBackingStores()
+        {
+
+        // noop
+
+        }   // end no-arg constructor
+
+
     /**
      * retrieve the contents of a chain, retaining the order of the entries
      * <p>
@@ -767,7 +785,7 @@ public class ReflectBackingStores
                                       collectionContents,           // to
                                       0,
                                       backingStoreArray.length - frontIndex ) ;
-                                                                    // how many elements
+                    // how many elements
 
                     // copy the back elements
                     System.arraycopy( backingStoreArray,            // from

@@ -65,4 +65,34 @@ public class StubMethodException extends RuntimeException
 
         }   // end constructor with descriptive message
 
+
+    /**
+     * constructor with cause
+     * 
+     * @param cause
+     *     the 'wrapped' exception
+     */
+    public StubMethodException( final Throwable cause )
+        {
+
+        super( cause ) ;
+
+        }   // end constructor with cause and no descriptive message
+
+
+    /**
+     * constructor with message and cause
+     * 
+     * @param message
+     *     descriptive message related to the {@code cause}
+     * @param cause
+     *     the 'wrapped' exception
+     */
+    public StubMethodException( final String message, final Throwable cause )
+        {
+
+        super( message, cause ) ;
+
+        }   // end constructor with descriptive message
+
     }   // end class StubMethodException

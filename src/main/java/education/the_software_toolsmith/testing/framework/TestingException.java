@@ -69,6 +69,8 @@ public class TestingException extends RuntimeException
 
 
     /**
+     * constructor with cause
+     * 
      * @param cause
      *     the 'wrapped' exception
      */
@@ -81,6 +83,8 @@ public class TestingException extends RuntimeException
 
 
     /**
+     * constructor with message and cause
+     * 
      * @param message
      *     descriptive message related to the {@code cause}
      * @param cause

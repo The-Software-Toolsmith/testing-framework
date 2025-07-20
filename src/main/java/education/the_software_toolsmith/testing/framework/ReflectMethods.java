@@ -38,6 +38,24 @@ public class ReflectMethods
 
 
     /*
+     * constructors
+     */
+
+
+    /**
+     * prevent instantiation
+     *
+     * @since 1.0
+     */
+    private ReflectMethods()
+        {
+
+        // noop
+
+        }   // end no-arg constructor
+
+
+    /*
      * methods for method invocation
      */
 

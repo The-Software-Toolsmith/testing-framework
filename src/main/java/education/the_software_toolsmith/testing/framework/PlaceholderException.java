@@ -63,6 +63,8 @@ public class PlaceholderException extends RuntimeException
 
 
     /**
+     * constructor with cause
+     * 
      * @param cause
      *     the 'wrapped' exception
      */
@@ -71,10 +73,12 @@ public class PlaceholderException extends RuntimeException
 
         super( cause ) ;
 
-        }   // end 'simple wrapper' constructor without message
+        }   // end constructor with cause and no descriptive message
 
 
     /**
+     * constructor with cause and message
+     * 
      * @param message
      *     descriptive message related to the {@code cause}
      * @param cause
@@ -85,6 +89,6 @@ public class PlaceholderException extends RuntimeException
 
         super( message, cause ) ;
 
-        }   // end 'wrapper' constructor with descriptive message
+        }   // end constructor with cause and descriptive message
 
     }   // end class PlaceholderException

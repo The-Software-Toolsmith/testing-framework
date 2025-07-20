@@ -24,7 +24,7 @@ import java.util.Collection ;
 import java.util.Map ;
 
 /**
- * Utilities to access and test characteristics of reference types, methods, fields. 
+ * Utilities to access and test characteristics of reference types, methods, fields.
  *
  * @author Dave Rosenberg
  *
@@ -58,6 +58,24 @@ import java.util.Map ;
  */
 public class Reflection
     {
+
+
+    /*
+     * constructors
+     */
+
+
+    /**
+     * prevent instantiation
+     *
+     * @since 2.0
+     */
+    private Reflection()
+        {
+
+        // noop
+
+        }   // end no-arg constructor
 
 
     /**

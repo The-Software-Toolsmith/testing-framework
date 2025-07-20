@@ -18,7 +18,7 @@
 
 package education.the_software_toolsmith.testing.framework ;
 
-import static education.the_software_toolsmith.testing.framework.TestData.* ;
+import static education.the_software_toolsmith.testing.framework.TestData.datasetToString ;
 
 import java.lang.reflect.Constructor ;
 import java.lang.reflect.InvocationTargetException ;
@@ -34,6 +34,24 @@ import java.lang.reflect.Type ;
  */
 public class ReflectReferenceTypes
     {
+
+
+    /*
+     * constructors
+     */
+
+
+    /**
+     * prevent instantiation
+     *
+     * @since 1.0
+     */
+    private ReflectReferenceTypes()
+        {
+
+        // noop
+
+        }   // end no-arg constructor
 
 
     /*
@@ -191,8 +209,10 @@ public class ReflectReferenceTypes
                 }
 
             final String errorMessage = String.format( "Failed to invoke %s-arg constructor %s(%s) in class %s with argument(s): %s:%n\t%s%s",
-                                                       ( ( null == arguments ) ||
-                                                         ( 0 == arguments.length )
+                                                       ( ( null ==
+                                                           arguments ) ||
+                                                         ( 0 ==
+                                                           arguments.length )
                                                                ? "no"
                                                                : String.format( "%,d",
                                                                                 arguments.length ) ),
