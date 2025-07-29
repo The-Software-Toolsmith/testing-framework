@@ -101,8 +101,9 @@ import org.junit.jupiter.api.TestInstance.Lifecycle ;
  *     left operand
  *     <li>rename {@code xxxEachTest()} to {@code xxxTest()} for greater consistency with class
  *     methods
- *     <li>keep {@code }}xxxEachTest() as deprecated, temporary pass-throughs
+ *     <li>keep {@code xxxEachTest()} as deprecated, temporary pass-throughs
  *     </ul>
+ * @version 7.0.1 2025-07-29 remove deprecated methods - they were executing twice
  */
 @DisplayName( "JUnit Testing Base" )
 @TestInstance( Lifecycle.PER_CLASS )
@@ -135,22 +136,6 @@ public class JUnitTestingBase extends TestingBase
 //        enableDebugging() ;	// DEBUG
 
         }	// end setUpBeforeClass()
-
-
-    /**
-     * @param testInfo
-     *     the current test environment
-     *
-     * @deprecated Use {@link #setUpBeforeTest(TestInfo)} instead
-     */
-    @Deprecated( forRemoval = true, since = "7.0" )
-    @BeforeEach
-    protected void setUpBeforeEachTest( final TestInfo testInfo )
-        {
-
-        setUpBeforeTest( testInfo ) ;
-
-        }	// end setUpBeforeEachTest()
 
 
     /**
@@ -243,22 +228,6 @@ public class JUnitTestingBase extends TestingBase
         enableExit() ;
 
         }	// end tearDownAfterClass()
-
-
-    /**
-     * @param testInfo
-     *     the current test environment
-     *
-     * @deprecated Use {@link #tearDownAfterTest(TestInfo)} instead
-     */
-    @Deprecated( forRemoval = true, since = "7.0" )
-    @AfterEach
-    protected void tearDownAfterEachTest( final TestInfo testInfo )
-        {
-
-        tearDownAfterTest( testInfo ) ;
-
-        }	// end tearDownAfterEachTest()
 
 
     /**
